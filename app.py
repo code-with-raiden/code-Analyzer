@@ -17,7 +17,7 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 # ----------------------------
 st.set_page_config(page_title="Python Code Analyzer", layout="wide")
 
-st.title("🐍 Python Code Analyzer & Loop Tracer (Gemini) Raiden ")
+st.title("🐍 Python Code Analyzer & Loop Tracer by Raiden ")
 st.write("Paste your Python code below to get **documentation**, **step-by-step explanation**, and **loop trace**.")
 
 # Text area for code input
@@ -27,7 +27,7 @@ if st.button("Analyze Code"):
     if not user_code.strip():
         st.error("Please paste some Python code before analyzing.")
     else:
-        with st.spinner("Analyzing your code with Gemini... ⏳"):
+        with st.spinner("Analyzing your code by raiden... ⏳"):
             prompt = f"""
             You are an advanced Python code documentation assistant.
             Given this Python code, do the following:
@@ -51,3 +51,4 @@ if st.button("Analyze Code"):
 
             except Exception as e:
                 st.error(f"Error: {e}")
+
